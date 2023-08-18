@@ -4,7 +4,7 @@ import MovieContent from "../movie/MovieContent"
 import NavBar from '../header/NavBar'
 const MovieContainer = () => {
 
-    let Api_key = "&api_key=3407e234e4eb43ed4e5f5f3ce456405c"
+    // let Api_key = "&api_key=3407e234e4eb43ed4e5f5f3ce456405c"
     let base_key = "http://api.themoviedb.org/3"
 
     let now_playing = "now_playing"
