@@ -34,19 +34,22 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18.13.0' # Use the desired Node.js version
+          node-version: '14' # Use the desired Node.js version
           
       - name: Install npm dependencies
         run: npm install
       
+      - name: Build app
+        run: npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
-          # Upload entire repository
-          path: './dist'
+          name: dist # Set the name of the artifact
+          path: dist # Change this to match your Vite app's build output directory
 
       - name: Deploy to GitHub Pages
         id: deployment
