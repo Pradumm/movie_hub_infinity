@@ -4,7 +4,7 @@ import { BsGlobe } from "react-icons/bs"
 const Footer = () => {
     return (
         <>
-            <footer className='w-[100%] bg-black text-white py-[30px]'>
+            <footer className='w-[100%] bg-black text-white py-[30px] px-3'>
                 <div className="max-w-[1170px] mx-auto ">
 
                     <p className='mb-8 text-gray-300 font-semibold'>Questions? Call 000-800-919-1694</p>

@@ -5,7 +5,7 @@ import NavBar from '../header/NavBar'
 const MovieContainer = () => {
 
     let Api_key = "&api_key=3407e234e4eb43ed4e5f5f3ce456405c"
-    let base_key = "https://api.themoviedb.org/3"
+    let base_key = "http://api.themoviedb.org/3"
 
     let now_playing = "now_playing"
     let upcoming = "upcoming";
@@ -46,7 +46,7 @@ const MovieContainer = () => {
     return (
         <div className=''>
             <NavBar />
-            <div className='py-20 flex  flex-col '>
+            <div className=' pt-16 pb-20 flex flex-col  px-3 bg-black'>
                 <MovieContent title={"Now playing"} movie={movie} />
                 <MovieContent title={"Upcoming Movies"} movie={upComingmovies} />
                 <MovieContent title={"populer Movies"} movie={populerMovies} />
