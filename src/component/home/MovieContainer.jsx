@@ -19,21 +19,21 @@ const MovieContainer = () => {
     const [populerMovies, setpopulerMovies] = useState([])
 
     const getApidata = async () => {
-        await axios.get(`${base_key}/movie/${now_playing}/?api_key=3407e234e4eb43ed4e5f5f3ce456405c`).then((res) => {
+        await axios.get("https://api.themoviedb.org/3/movie/now_playing?api_key=3407e234e4eb43ed4e5f5f3ce456405c").then((res) => {
             let result = res.data.results
-            console.log(result, "_________result")
+
             setmovie(result)
         })
     }
     const getupcomingMovies = async () => {
-        await axios.get(`${base_key}/movie/${upcoming}/?api_key=3407e234e4eb43ed4e5f5f3ce456405c`).then((res) => {
+        await axios.get("https://api.themoviedb.org/3/movie/upcoming?api_key=3407e234e4eb43ed4e5f5f3ce456405c").then((res) => {
             let result = res.data.results
-            console.log(result, "_________result")
+
             setupcomingmovies(result)
         })
     }
     const getpopulerMovies = async () => {
-        await axios.get(`${base_key}/movie/${Populer}/?api_key=3407e234e4eb43ed4e5f5f3ce456405c`).then((res) => {
+        await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=3407e234e4eb43ed4e5f5f3ce456405c").then((res) => {
             let result = res.data.results
             setpopulerMovies(result)
         })
