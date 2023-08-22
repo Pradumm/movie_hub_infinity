@@ -7,6 +7,7 @@ import Footer from './component/Footer/Footer'
 import About from './component/taiwind_practice/About'
 import MovieContainer from './component/home/MovieContainer'
 import QuizContainer from './component/Quiz/QuizContainer'
+import SingleMovie from './component/movie/SingleMovie'
 function App() {
 
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/bubble' element={<About />} />
           <Route path='/movie' element={<MovieContainer />} />
+          <Route path='/singlemovie' element={<SingleMovie />} />
           <Route path='/quiz' element={<QuizContainer />} />
 
         </Routes>
