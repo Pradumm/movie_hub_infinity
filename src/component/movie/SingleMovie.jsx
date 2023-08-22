@@ -1,6 +1,9 @@
 import React from 'react'
 import { useParams, useLocation } from 'react-router-dom'
 import Rating from 'react-rating-stars-component';
+import { useState } from 'react';
+
+
 const SingleMovie = () => {
   let img_path = "https://image.tmdb.org/t/p/w500"
 
@@ -8,17 +11,21 @@ const SingleMovie = () => {
   const location = useLocation();
   const { title, overview, backdrop_path, poster_path, release_date, original_language, vote_average } = location.state.moviex;
 
-  console.log(location)
-  console.log(title)
+  const [showmsg, setshowmsg] = useState(false)
+
+  const VideoPlay = () => {
+        alert("Video Url Not Found  ")
+  }
 
   return (
     <>
+
 
       <div class=" py-[60px] bg-black  text-white  ">
         <div className='max-w-[800px] h-[500px] mx-auto flex flex-col sm:flex-row'>
 
           <img className='h-[200px] object-cover sm:h-full' src={img_path + poster_path} alt="" />
-        
+
           <div class="ml-2 md:ml-10">
             <h2 className='text-[30px] sm:text-[45px] font-serif'>{title}</h2>
             <p class="text-white font-medium  mb-[10px]">{overview}</p>
@@ -31,11 +38,14 @@ const SingleMovie = () => {
               edit={false}
               classNames=""// Disable user interaction
             />
-            <button className='px-5 py-2 mt-5 bg-blue-950 text-white font-serif capitalize font-bold'>watch Now </button>
+            <button className='px-5 py-2 mt-5 bg-blue-950 text-white font-serif capitalize font-bold'
+              onClick={VideoPlay}
+            >watch Now </button>
 
           </div>
         </div>
       </div>
+
 
     </>
   )

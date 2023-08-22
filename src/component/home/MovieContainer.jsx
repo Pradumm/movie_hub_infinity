@@ -8,7 +8,7 @@ const MovieContainer = () => {
     // let Api_key = "&api_key=3407e234e4eb43ed4e5f5f3ce456405c"
     let img_path = "https://image.tmdb.org/t/p/w500"
 
-    let base_key = "http://api.themoviedb.org/3"
+    let base_key = "https://api.themoviedb.org/3"
 
     let now_playing = "now_playing"
     let upcoming = "upcoming";
@@ -62,7 +62,7 @@ const MovieContainer = () => {
                         size={24} // Size of the stars
                         activeColor="#f5b01b" // Color of active stars
                         edit={false}
-                        // Disable user interaction
+                    // Disable user interaction
                     />
                     <button className='px-5 py-2 mt-5 bg-blue-950 text-white font-serif capitalize font-bold'>watch Now </button>
 
