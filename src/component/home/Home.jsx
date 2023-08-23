@@ -28,7 +28,7 @@ const Home = () => {
 
                             </figure>
                             <div className='flex justify-end items-center gap-[10px]'>
-                                <div className='relative'>
+                                <div className=' hidden sm:block relative'>
                                     <BsGlobe className="text-white absolute top-[10px] left-[5px]" />
                                     <select className='text-white bg-black border px-[25px] py-[5px] rounded-[5px]'>
                                         <option value="English">English</option>

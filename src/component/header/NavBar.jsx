@@ -2,9 +2,14 @@ import React, { useState } from 'react'
 
 import Netflix from "../../assets/Netflix-Logo.png";
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
 
+import { ContextContainer } from '../Context/ContextData';
 const NavBar = () => {
+
     const [isOpen, setIsOpen] = useState(true);
+
+    const { GetSerachdata, input_search, searchmove } = useContext(ContextContainer)
 
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
@@ -31,9 +36,19 @@ const NavBar = () => {
                         </svg>
                     </button>
 
+                    <input
+                        value={input_search}
+                        onChange={GetSerachdata}
+                        type='text'
+                        onKeyPress={searchmove}
+                        placeholder="Search for movies..."
+                        className='border px-4 py-2 rounded-full focus:outline-none text-black'
+                    />
+
+
 
                     <div class={`${isOpen ? "hidden" : ""} w-full md:block md:w-auto`}>
-                        <ul class="font-medium font-serif flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg capitalize  md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <ul class=" bg-blue-950 sm:bg-transparent font-medium font-serif flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg capitalize  md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                             <li>
                                 <Link to="/" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 dark:text-white md:dark:text-blue-500">Home</Link>
                             </li>
